@@ -401,7 +401,6 @@ document.addEventListener('keydown', (e) => {
       d.classList.toggle('active', i === idx);
     });
     current = idx;
-    if ("vibrate" in navigator) navigator.vibrate(40);
   }
 
   function next() {

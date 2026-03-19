@@ -2199,8 +2199,8 @@ ul { list-style: none; }
 
   /* Chat */
   .chat-box { width: calc(100vw - 56px); }
-  .chat-widget { bottom: 18px; right: 18px; }
-  .float-whatsapp-btn { display: flex; bottom: 88px; right: 18px; }
+  .chat-widget { display: none !important; }
+  .float-whatsapp-btn { display: flex; bottom: 18px; right: 18px; }
   .float-call-btn { display: flex; bottom: 18px; left: 18px; right: auto; }
 
   /* Gallery */
