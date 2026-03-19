@@ -21,10 +21,6 @@
     preloader.classList.add('hidden');
     document.body.classList.remove('preloading');
 
-    // Trigger mobile vibration on reveal
-    if ("vibrate" in navigator) {
-      navigator.vibrate(200);
-    }
 
     // Remove from DOM after transition
     preloader.addEventListener('transitionend', () => {
@@ -495,16 +491,29 @@ document.addEventListener('keydown', (e) => {
     dots.forEach((d, i) => d.classList.toggle('active', i === center));
   }
 
+  // Dynamically set stage height to match center card height
+  function updateStageHeight() {
+    if (!isMobile()) return;
+    const centerCard = cards[center];
+    if (centerCard) {
+      // Temporarily make it visible to measure
+      const prevTransform = stage.style.transform;
+      const h = centerCard.scrollHeight || centerCard.offsetHeight;
+      if (h > 0) stage.style.height = h + 'px';
+    }
+  }
+
   function goTo(idx) {
     center = (idx + TOTAL) % TOTAL;
     applyPositions();
-    if ("vibrate" in navigator) navigator.vibrate(40);
+    setTimeout(updateStageHeight, 100);
   }
 
   function startCarousel() {
     if (active) return;
     active = true;
     applyPositions();
+    setTimeout(updateStageHeight, 200);
     prevBtn.style.display = '';
     nextBtn.style.display = '';
     if (dotsEl) dotsEl.style.display = '';

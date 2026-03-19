@@ -75,7 +75,10 @@ ul { list-style: none; }
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 24px;
+  width: 100%;
+  text-align: center;
 }
 
 .logo-anim {
@@ -85,6 +88,7 @@ ul { list-style: none; }
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0 auto;
 }
 
 #preloader-logo {
@@ -862,7 +866,7 @@ ul { list-style: none; }
     display: block;
     position: relative;
     width: 100%;
-    height: 540px;           /* enough for tallest card */
+    height: 480px;
     perspective: 1100px;
   }
 
@@ -871,13 +875,13 @@ ul { list-style: none; }
     position: absolute;
     top: 0;
     left: 50%;
-    width: 78%;
+    width: 82%;
     transform-origin: center center;
     transition:
       transform 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94),
       opacity   0.55s ease,
       filter    0.55s ease,
-      z-index   0s 0.27s;     /* delay z-index change to mid-animation */
+      z-index   0s 0.27s;
     cursor: pointer;
   }
 
@@ -945,6 +949,15 @@ ul { list-style: none; }
 
   .plans-arrow--prev { left: -6px; }
   .plans-arrow--next { right: -6px; }
+
+  /* Make plan cards compact on mobile */
+  .plan-header { padding: 20px 22px 18px; }
+  .plan-features { padding: 16px 22px; gap: 10px; }
+  .plan-btn { margin: 0 22px 22px; }
+  .plan-icon { font-size: 1.4rem; margin-bottom: 10px; }
+  .plan-name { font-size: 1.1rem; }
+  .plan-price { font-size: 1.7rem; }
+  .plan-features li { font-size: 0.85rem; }
 
   /* Dots */
   .plans-dots {
@@ -1151,9 +1164,9 @@ ul { list-style: none; }
 
   /* The perspective wrapper */
   .trainers-ring-scene {
-    width: 320px;
-    height: 360px;
-    perspective: 900px;
+    width: 340px;
+    height: 420px;
+    perspective: 1000px;
     position: relative;
   }
 
@@ -1169,11 +1182,11 @@ ul { list-style: none; }
   /* Individual ring card */
   .ring-card {
     position: absolute;
-    width: 150px;
+    width: 170px;
     left: 50%;
     top: 50%;
-    margin-left: -75px;
-    margin-top: -100px;
+    margin-left: -85px;
+    margin-top: -110px;
     background: var(--bg-card);
     border: 1px solid rgba(255,215,0,0.2);
     border-radius: 14px;
@@ -1190,7 +1203,7 @@ ul { list-style: none; }
 
   .ring-card img {
     width: 100%;
-    height: 130px;
+    height: 150px;
     object-fit: cover;
     object-position: center top;
     display: block;
@@ -2106,8 +2119,8 @@ ul { list-style: none; }
   .stat-num { font-size: 1.5rem; }
 
   /* Sections */
-  .about, .classes, .membership, .contact-section { padding: 80px 0; }
-  .section-sub { margin-bottom: 40px; }
+  .about, .classes, .membership, .trainers-section, .contact-section { padding: 70px 0; }
+  .section-sub { margin-bottom: 32px; }
 
   /* Grids */
   .features-grid { grid-template-columns: 1fr; }
@@ -2135,6 +2148,32 @@ ul { list-style: none; }
   .hero-title { font-size: 2.1rem; }
   .section-title { font-size: 1.8rem; }
   .hero-stats .stat-divider { display: none; }
+
+  /* Smaller plan stage for very small phones */
+  .plans-stage { height: 430px; }
+
+  /* Preloader always centered */
+  #preloader {
+    align-items: center;
+    justify-content: center;
+  }
+  .preloader-inner {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0 20px;
+  }
+  .logo-anim {
+    width: 110px;
+    height: 110px;
+  }
+  .logo-ring {
+    width: 110px;
+    height: 110px;
+  }
+  #preloader-logo { width: 70px; height: 70px; }
+  .brand-teerex { font-size: 2rem; }
+
   .gallery-grid {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(4, 200px);
