@@ -2000,12 +2000,12 @@ ul { list-style: none; }
   height: 60px;
   border-radius: 50%;
   background: #1d8ef5;
+  display: none; /* Hidden on desktop */
   /* Entry animation — starting after preloader */
   animation: popIn 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
   animation-delay: 3.2s; /* staggered by 0.1s from chat */
   color: #fff;
   text-decoration: none;
-  display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.35rem;
@@ -2136,7 +2136,7 @@ ul { list-style: none; }
   /* Chat */
   .chat-box { width: calc(100vw - 56px); }
   .chat-widget { bottom: 18px; right: 18px; }
-  .float-call-btn { bottom: 18px; left: 18px; right: auto; }
+  .float-call-btn { display: flex; bottom: 18px; left: 18px; right: auto; }
 
   /* Gallery */
   .gallery-grid { grid-template-columns: 1fr 1fr; }
