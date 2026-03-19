@@ -2055,6 +2055,51 @@ ul { list-style: none; }
   100% { transform: scale(1.22); opacity: 0;   }
 }
 
+/* ── Floating WhatsApp Button (bottom-right — mobile only) ── */
+.float-whatsapp-btn {
+  position: fixed;
+  bottom: 96px; /* Positioned above the chat button (18px + 60px + gap) */
+  right: 28px;
+  z-index: 999;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #25d366; /* WhatsApp Green */
+  display: none; /* Hidden on desktop */
+  animation: popIn 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+  animation-delay: 3.3s;
+  color: #fff;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.5), 0 0 20px rgba(37,211,102,0.3);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+.float-whatsapp-btn:hover,
+.float-whatsapp-btn:active {
+  transform: translateY(-4px) scale(1.08);
+  box-shadow: 0 10px 32px rgba(37,211,102,0.6);
+  background: #1ebe57;
+}
+
+/* Pulse ring for WhatsApp */
+.float-whatsapp-btn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 2px solid rgba(37,211,102,0.6);
+  animation: waPulse 2.2s ease-out infinite;
+}
+
+@keyframes waPulse {
+  0%   { transform: scale(1);    opacity: 0.9; }
+  70%  { transform: scale(1.25); opacity: 0;   }
+  100% { transform: scale(1.25); opacity: 0;   }
+}
+
 
 
 
@@ -2155,6 +2200,7 @@ ul { list-style: none; }
   /* Chat */
   .chat-box { width: calc(100vw - 56px); }
   .chat-widget { bottom: 18px; right: 18px; }
+  .float-whatsapp-btn { display: flex; bottom: 88px; right: 18px; }
   .float-call-btn { display: flex; bottom: 18px; left: 18px; right: auto; }
 
   /* Gallery */
