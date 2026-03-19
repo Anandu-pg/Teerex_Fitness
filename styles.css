@@ -83,8 +83,8 @@ ul { list-style: none; }
 
 .logo-anim {
   position: relative;
-  width: 130px;
-  height: 130px;
+  width: 110px;
+  height: 110px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -92,8 +92,8 @@ ul { list-style: none; }
 }
 
 #preloader-logo {
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   object-fit: contain;
   animation: logoPulse 1.2s ease-in-out infinite alternate;
   position: relative;
@@ -111,8 +111,8 @@ ul { list-style: none; }
 .logo-ring {
   position: absolute;
   inset: 0;
-  width: 130px;
-  height: 130px;
+  width: 110px;
+  height: 110px;
 }
 
 .ring-track {
@@ -315,8 +315,8 @@ ul { list-style: none; }
 }
 
 .nav-logo-icon {
-  width: 42px;
-  height: 42px;
+  width: 58px;
+  height: 58px;
   object-fit: contain;
   filter: drop-shadow(0 0 8px rgba(255,215,0,0.4));
   transition: filter 0.3s;
@@ -326,7 +326,7 @@ ul { list-style: none; }
 .nav-logo:hover .nav-logo-icon { filter: drop-shadow(0 0 16px rgba(255,215,0,0.8)); }
 
 .nav-logo-text { display: flex; flex-direction: column; line-height: 1.1; }
-.logo-main { font-family: var(--font-heading); font-size: 1.25rem; letter-spacing: 0.1em; color: var(--yellow); }
+.logo-main { font-family: var(--font-heading); font-size: 1.4rem; letter-spacing: 0.1em; color: var(--yellow); }
 .logo-sub { font-size: 0.6rem; font-weight: 600; letter-spacing: 0.35em; color: var(--text-muted); text-transform: uppercase; }
 
 .nav-links {
@@ -2171,8 +2171,8 @@ ul { list-style: none; }
     width: 110px;
     height: 110px;
   }
-  #preloader-logo { width: 70px; height: 70px; }
-  .brand-teerex { font-size: 2rem; }
+  #preloader-logo { width: 55px; height: 55px; }
+  .brand-teerex { font-size: 1.8rem; }
 
   .gallery-grid {
     grid-template-columns: 1fr 1fr;
