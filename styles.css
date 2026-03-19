@@ -1160,7 +1160,7 @@ ul { list-style: none; }
     flex-direction: column;
     align-items: center;
     gap: 12px;
-    padding: 20px 0 40px;
+    padding: 10px 0 20px;
   }
 
   .ring-hint {
@@ -1178,7 +1178,7 @@ ul { list-style: none; }
   /* The perspective wrapper */
   .trainers-ring-scene {
     width: 360px;
-    height: 460px;
+    height: 400px;
     perspective: 1000px;
     position: relative;
   }
@@ -2183,7 +2183,8 @@ ul { list-style: none; }
   .stat-num { font-size: 1.5rem; }
 
   /* Sections */
-  .about, .classes, .membership, .trainers-section, .contact-section { padding: 70px 0; }
+  .about, .classes, .membership, .contact-section, .gallery-section { padding: 70px 0; }
+  .trainers-section { padding: 50px 0 70px; }
   .section-sub { margin-bottom: 32px; }
 
   /* Grids */
